@@ -256,3 +256,63 @@
 {
     color:rgb(61, 116, 224) ;
 }
+
+
+.banner
+{
+    padding: 20px 30px;
+    width:100%
+}
+
+.banner .container
+{
+    background-color: rgb(61, 116, 224);
+    padding: 30px 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .container .detail
+{
+    margin-top: 10%;
+    margin-left: 20px;
+}
+
+.banner .container .detail h4
+{
+    color: white;
+    font-size: 16px;
+}
+
+.banner .container .detail h3
+{
+    margin-top: 10px;
+    font-size: 42px;
+    margin-right: 20%;
+    color: white;
+}
+
+.banner .container .detail p
+{
+    margin-top: 30px;
+    font-weight: 600;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.banner .container .detail .link
+{
+    padding: 10px 30px;
+    color: white;
+    background-color:black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.banner .container .detail .link:hover
+{
+    color: black;
+    background-color: white;
+}

@@ -32,25 +32,28 @@ Make sure you have the following installed:
 ### Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/Navaneethmenchu/react-ecommerce.git
-    cd react-ecommerce
-    ```
+
+   ```bash
+   git clone https://github.com/Navaneethmenchu/react-ecommerce.git
+   cd react-ecommerce
+   ```
 
 2. Install dependencies:
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
-    ```bash
-    npm start
-    ```
+
+   ```bash
+   npm start
+   ```
 
 4. Open your browser and visit:
-    ```
-    http://localhost:3000
-    ```
+   ```
+   http://localhost:3000
+   ```
 
 ---
 
@@ -60,3 +63,4 @@ Basic unit and component tests can be run using:
 
 ```bash
 npm test
+```

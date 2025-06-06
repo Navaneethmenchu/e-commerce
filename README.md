@@ -1,66 +1,25 @@
-# 🛒 React E-Commerce App
+# 🛒 React eCommerce Website
 
-A modern, responsive e-commerce web application built with **React.js**, featuring dynamic product listings, shopping cart functionality, and user authentication. Designed to simulate a real-world online shopping experience and serve as a strong foundation for future development.
+A full-featured eCommerce website built with **React**, **HTML**, **CSS**, and **JavaScript**. It includes authentication with **Auth0**, a real-time backend using **Firebase**, and essential shopping features like product browsing, cart management, and checkout.
 
 ---
 
 ## 🚀 Features
 
-- 🧾 **Product Listings** – Browse a collection of products with filtering and search functionality.
-- 🛍️ **Shopping Cart** – Add, update, and remove products from your cart.
-- 🔐 **User Authentication** – Sign up, log in, and manage user sessions (via Firebase/Auth/Other).
+- ✅ Responsive UI with React, HTML, and CSS
+- 🔐 User authentication with Auth0
+- 🔥 Backend and database using Firebase
+- 🛍️ Add-to-cart and cart persistence
+- 💳 Checkout flow with order summary
+- 🔎 Product listing and detail views
 
 ---
 
-## 🛠️ Tech Stack
+## 🧰 Tech Stack
 
-- **Frontend:** React.js, React Router DOM
-- **Styling:** CSS
-- **Authentication:** Firebase Auth
-
----
-
-## 📦 Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js (v14 or newer)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Navaneethmenchu/react-ecommerce.git
-   cd react-ecommerce
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-
-   ```bash
-   npm start
-   ```
-
-4. Open your browser and visit:
-   ```
-   http://localhost:3000
-   ```
+- **Frontend**: React, JavaScript, HTML5, CSS3
+- **Authentication**: Auth0
+- **Backend / Realtime Database**: Firebase (Firestore)
+- **Deployment**: Vercel / Netlify / Firebase Hosting
 
 ---
-
-## 🧪 Testing
-
-Basic unit and component tests can be run using:
-
-```bash
-npm test
-```

@@ -136,7 +136,7 @@ const Home = () => {
         <div className="detail">
           <h4>LATEST TECHNOLOGY ADDED</h4>
           <h3>Apple ipad 10.2 9th gen 2023</h3>
-          <p><BiDollar /> 999</p>
+          <p>$999</p>
           <Link to="/product" className="link">Shop Now <BsArrowRight /></Link>
         </div>
         <div className="img-box">

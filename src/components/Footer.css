@@ -1,0 +1,129 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.footer
+{
+    padding: 30px 40px;
+    background-color:aliceblue;
+    width: 100%;
+}
+
+.footer .container
+{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.footer .container .about
+{
+    max-width: 25%;
+}
+
+.footer .container .about img
+{
+    width: 70px;
+    height: auto;
+
+}
+
+.footer .container .about .detail p
+{
+    margin-top: 15px;
+    color: hsl(0, 0%, 16%);
+    font-size: 16px;
+}
+
+.footer .container .about .detail .icons
+{
+    display: flex;
+    margin-top: 15px;
+}
+
+.footer .container .about .detail .icons li
+{
+    margin-left: 20px;
+    list-style: none;
+    padding: 10px 10px;
+    box-shadow: hsla(0, 0%, 0%, 0.249) 2px 2px 2.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer .container .about .detail .icons li:hover
+{
+    background-color: rgb(61, 116, 224);
+    color: white;
+    font-size: 15px;
+}
+
+.footer .container .account
+{
+    margin-right: 90px;
+    margin-top: 40px;
+}
+
+.footer .container .account h3
+{
+    font-size: 32px;
+    color: hsl(209, 93%, 6%);
+}
+
+.footer .container .account ul
+{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.footer .container .account ul li
+{
+    margin-top: 10px;
+    color: hsl(209, 93%, 6%);
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+.footer .container .account ul li:hover
+{
+    color:rgb(61, 116, 224);
+}
+
+
+.footer .container .pages
+{
+    margin-right: 90px;
+    margin-top: 40px;
+}
+
+.footer .container .pages h3
+{
+    font-size: 32px;
+    color: hsl(209, 93%, 6%);
+}
+
+.footer .container .pages ul
+{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.footer .container .pages ul li
+{
+    margin-top: 10px;
+    color: hsl(209, 93%, 6%);
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+.footer .container .pages ul li:hover
+{
+    color:rgb(61, 116, 224);
+}

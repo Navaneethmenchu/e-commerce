@@ -7,14 +7,45 @@ import { ImHeadphones } from "react-icons/im";
 import { IoCartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import HomeProduct from "./HomeProduct";
 import "./Home.css"
 import { useState } from "react";
 
-const Home = () => {
+const Home = ({detail, view, close, setClose}) => {
   const [homeProduct, setHomeProduct] = useState(HomeProduct)
   return (
     <>
+    {
+          close ?
+          <div className="product-detail">
+          <div className="container">
+            <button onClick={() => setClose(false)} className="closebtn"><IoIosCloseCircleOutline /></button>
+            {
+              detail.map((elm) => 
+                {
+                  return(
+                    <div className="productbox">
+                      <div className="img-box">
+                        <img src={elm.image} alt={elm.title} />
+                      </div>
+                      <div className="detail">
+                        <h4>{elm.category}</h4>
+                        <h2>{elm.title}</h2>
+                        <h3>{elm.price}</h3>
+                        <button>Add to card</button>
+                      </div>
+                    </div>
+                    
+                  )
+                
+    
+              })
+            }
+    
+          </div>
+        </div> : null
+        }
     <div className="top_banner">
       <div className="container">
         <div className="detail">
@@ -114,7 +145,7 @@ const Home = () => {
                   <img src={elm.image} alt={elm.title} />
                   <div className="icons">
                     <li><IoCartOutline /></li>
-                    <li><IoEyeOutline /></li>
+                    <li onClick={() => view(elm)}><IoEyeOutline /></li>
                     <li><IoIosHeartEmpty /></li>
                   </div>
                 </div>

@@ -1,12 +1,56 @@
 import { IoCartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import Productdetail from "./Productdetail";
 import "./Product.css";
 
-const Product = () => {
+const Product = ({product, setProduct, detail, view, close, setClose}) => {
+
+  const filterproduct = (product) => {
+    const update = Productdetail.filter((x) => {
+      return x.category === product;
+    })
+    setProduct(update)
+  }
+
+  const allproducts = () => {
+    setProduct(Productdetail);
+  }
+
+
   return (
     <>
+    {
+      close ?
+      <div className="product-detail">
+      <div className="container">
+        <button onClick={() => setClose(false)} className="closebtn"><IoIosCloseCircleOutline /></button>
+        {
+          detail.map((elm) => 
+            {
+              return(
+                <div className="productbox">
+                  <div className="img-box">
+                    <img src={elm.image} alt={elm.title} />
+                  </div>
+                  <div className="detail">
+                    <h4>{elm.category}</h4>
+                    <h2>{elm.title}</h2>
+                    <h3>{elm.price}</h3>
+                    <button>Add to card</button>
+                  </div>
+                </div>
+                
+              )
+            
+
+          })
+        }
+
+      </div>
+    </div> : null
+    }
     <div className="products">
         <h2># PRODUCTS</h2>
         <p>Home .Products</p>
@@ -15,17 +59,18 @@ const Product = () => {
                 <div className="categories">
                     <h3>CATEGORIES</h3>
                     <ul>
-                        <li>Mobile</li>
-                        <li>SmartWatch</li>
-                        <li>HeadPhones</li>
-                        <li>Laptop</li>
+                        <li onClick={() => allproducts()}>All</li>
+                        <li onClick={() => filterproduct("Mobile")}>Mobile</li>
+                        <li onClick={() => filterproduct("SmartWatch")}>SmartWatch</li>
+                        <li onClick={() => filterproduct("HeadPhones")}>HeadPhones</li>
+                        <li onClick={() => filterproduct("Laptop")}>Laptop</li>
                     </ul>
                 </div>
             </div>
             <div className="productbox">
               <div className="productcontainer">
                 {
-                  Productdetail.map((elm) =>
+                  product.map((elm) =>
                     {
                       return(
                         <div className="box" key={elm.id}>
@@ -33,7 +78,7 @@ const Product = () => {
                             <img src={elm.image} alt={elm.title} />
                             <div className="icons">
                               <li><IoCartOutline /></li>
-                              <li><IoEyeOutline /></li>
+                              <li onClick={() => view(elm)}><IoEyeOutline /></li>
                               <li><IoIosHeartEmpty /></li>
                             </div>
                           </div>

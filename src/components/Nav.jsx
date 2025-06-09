@@ -20,7 +20,7 @@ const Nav = ({searchbtn}) => {
             <FaTruckMoving />
         </div> 
         <p>
-            FREE Shipping when shopping upto $1000
+            FREE Shipping for shopping above $1000
         </p>
     </div>
     <div className="main_header">

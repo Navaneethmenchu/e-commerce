@@ -12,7 +12,7 @@ import HomeProduct from "./HomeProduct";
 import "./Home.css"
 import { useState } from "react";
 
-const Home = ({detail, view, close, setClose}) => {
+const Home = ({detail, view, close, setClose, addtocart}) => {
   const [homeProduct, setHomeProduct] = useState(HomeProduct)
   return (
     <>
@@ -32,7 +32,7 @@ const Home = ({detail, view, close, setClose}) => {
                       <div className="detail">
                         <h4>{elm.category}</h4>
                         <h2>{elm.title}</h2>
-                        <h3>{elm.price}</h3>
+                        <h3>${elm.price}</h3>
                         <button>Add to card</button>
                       </div>
                     </div>
@@ -144,7 +144,7 @@ const Home = ({detail, view, close, setClose}) => {
                 <div className="img_box">
                   <img src={elm.image} alt={elm.title} />
                   <div className="icons">
-                    <li><IoCartOutline /></li>
+                    <li onClick={() => addtocart(elm)}><IoCartOutline /></li>
                     <li onClick={() => view(elm)}><IoEyeOutline /></li>
                     <li><IoIosHeartEmpty /></li>
                   </div>
@@ -152,7 +152,7 @@ const Home = ({detail, view, close, setClose}) => {
                 <div className="details">
                   <p>{elm.category}</p>
                   <h3>{elm.title}</h3>
-                  <h4>{elm.price}</h4>
+                  <h4>${elm.price}</h4>
                 </div>
               </div>
             )

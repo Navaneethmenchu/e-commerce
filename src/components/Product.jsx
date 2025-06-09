@@ -5,7 +5,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import Productdetail from "./Productdetail";
 import "./Product.css";
 
-const Product = ({product, setProduct, detail, view, close, setClose}) => {
+const Product = ({product, setProduct, detail, view, close, setClose,addtocart}) => {
 
   const filterproduct = (product) => {
     const update = Productdetail.filter((x) => {
@@ -37,7 +37,7 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                   <div className="detail">
                     <h4>{elm.category}</h4>
                     <h2>{elm.title}</h2>
-                    <h3>{elm.price}</h3>
+                    <h3>${elm.price}</h3>
                     <button>Add to card</button>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                           <div className="img_box">
                             <img src={elm.image} alt={elm.title} />
                             <div className="icons">
-                              <li><IoCartOutline /></li>
+                              <li onClick={() => addtocart(elm)}><IoCartOutline /></li>
                               <li onClick={() => view(elm)}><IoEyeOutline /></li>
                               <li><IoIosHeartEmpty /></li>
                             </div>
@@ -85,7 +85,7 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                           <div className="details">
                             <p>{elm.category}</p>
                             <h3>{elm.title}</h3>
-                            <h4>{elm.price}</h4>
+                            <h4>${elm.price}</h4>
                           </div>
                         </div>
                         )

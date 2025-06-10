@@ -8,12 +8,14 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { useAuth0} from "@auth0/auth0-react";
 import HomeProduct from "./HomeProduct";
 import "./Home.css"
 import { useState } from "react";
 
 const Home = ({detail, view, close, setClose, addtocart}) => {
   const [homeProduct, setHomeProduct] = useState(HomeProduct)
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
     {
@@ -144,7 +146,11 @@ const Home = ({detail, view, close, setClose, addtocart}) => {
                 <div className="img_box">
                   <img src={elm.image} alt={elm.title} />
                   <div className="icons">
-                    <li onClick={() => addtocart(elm)}><IoCartOutline /></li>
+                    {
+                      isAuthenticated ?
+                      <li onClick={() => addtocart(elm)}><IoCartOutline /></li>:
+                      <li onClick={() => loginWithRedirect()}><IoCartOutline /></li>
+                      }
                     <li onClick={() => view(elm)}><IoEyeOutline /></li>
                     <li><IoIosHeartEmpty /></li>
                   </div>

@@ -60,10 +60,11 @@ const Cart = ({cart,setCart}) => {
                     {
                         return(
                             <div className="cart_item" key={elm.id}>
-                            <div className="img_box">
+                              <div className="img_box">
                                 <img src={elm.image} alt={elm.title} />
-                            </div>
-                            <div className="detail">
+                              </div>
+                              <div className="detail">
+                                <div className="info">
                                 <h4>{elm.category}</h4>
                                 <h3>{elm.title}</h3>
                                 <p>${elm.price}</p>
@@ -72,9 +73,12 @@ const Cart = ({cart,setCart}) => {
                                     <input type="text" value={elm.qty} />
                                     <button className="dec_qty" onClick={() => decqty(elm)}>-</button>
                                 </div>
-                                <h4>sub total: ${elm.price * elm.qty}</h4>
+                                <h4 className="subtotal">sub total: ${elm.price * elm.qty}</h4>
+                                </div>
+                                <div className="close">
                                 <button onClick={() => removeproduct(elm)}><IoIosCloseCircleOutline/></button>
-                            </div>
+                                </div>
+                              </div>
                             </div>
                 
                         )
@@ -84,7 +88,7 @@ const Cart = ({cart,setCart}) => {
         {
             cart.length > 0 && 
             <>
-            <h2 className="total_price">${totalprice}</h2>
+            <h2 className="total_price">total : ${totalprice}</h2>
             <button className="checkout">Checkout</button>
             </>
         }

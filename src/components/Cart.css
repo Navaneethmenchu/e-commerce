@@ -37,3 +37,143 @@
     background-color: black;
     padding: 10px 20px;
 }
+
+.cart_container .cart
+{
+    max-width: 100%;
+    padding: 50px 100px;
+}
+
+.cart_container .cart .cart_item
+{
+    padding: 20px 30px;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cart_container .cart .cart_item .img_box
+{
+    padding: 20px 20px;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.cart_container .cart .cart_item .img_box img
+{
+    height: 250px;
+    width: 250px;
+}
+
+.cart_container .cart .cart_item .detail
+{
+    margin-left: 60px;
+    display: flex;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
+
+.cart_container .cart .cart_item .detail .info h4
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: hsl(0, 0%, 60%);
+    font-weight: 100;
+}
+
+.cart_container .cart .cart_item .detail .info h3
+{
+    margin-top: 20px;
+    color: hsl(209, 93%, 6%);
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.cart_container .cart .cart_item .detail .info p
+{
+    margin-top: 10px;
+    color: hsl(209, 93%, 6%);
+}
+
+.cart_container .cart .cart_item .detail .info .qty
+{
+    margin-top: 10px;
+    display: flex;
+}
+
+.cart_container .cart .cart_item .detail .info .qty .inc_qty
+{
+    padding: 10px 10px;
+    outline: none;
+    background: none;
+    border: none;
+    color: rgb(61, 116, 224);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.cart_container .cart .cart_item .detail .info .qty .dec_qty
+{
+    padding: 10px 10px;
+    outline: none;
+    background: none;
+    border: none;
+    color: rgb(61, 116, 224);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.cart_container .cart .cart_item .detail .info .qty input
+{
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: hsl(209, 93%, 6%);
+    width:50px;
+    margin-left: 25px;
+}
+
+.cart_container .cart .cart_item .detail .info .subtotal
+{
+    font-size: 22px;
+    color: hsl(209, 93%, 6%);
+    margin-top: 10px;
+}
+
+.cart_container .cart .cart_item .detail .close
+{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.cart_container .cart .cart_item .detail .close button
+{
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: hsl(341, 100%, 43%);
+}
+
+.cart_container .total_price
+{
+    margin-top: 30px;
+    margin-left: 50%;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.cart_container .checkout
+{
+    margin-top: 40px;
+    margin-left: 53%;
+    padding: 10px 20px;
+    background-color: rgb(61, 116, 224);
+    cursor: pointer;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    outline: none;
+
+}

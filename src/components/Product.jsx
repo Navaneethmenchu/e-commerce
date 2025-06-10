@@ -2,10 +2,12 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { useAuth0} from "@auth0/auth0-react";
 import Productdetail from "./Productdetail";
 import "./Product.css";
 
 const Product = ({product, setProduct, detail, view, close, setClose,addtocart}) => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   const filterproduct = (product) => {
     const update = Productdetail.filter((x) => {
@@ -38,7 +40,7 @@ const Product = ({product, setProduct, detail, view, close, setClose,addtocart})
                     <h4>{elm.category}</h4>
                     <h2>{elm.title}</h2>
                     <h3>${elm.price}</h3>
-                    <button>Add to card</button>
+                    <button>Add to cart</button>
                   </div>
                 </div>
                 
@@ -77,7 +79,11 @@ const Product = ({product, setProduct, detail, view, close, setClose,addtocart})
                           <div className="img_box">
                             <img src={elm.image} alt={elm.title} />
                             <div className="icons">
-                              <li onClick={() => addtocart(elm)}><IoCartOutline /></li>
+                              {
+                                isAuthenticated ?
+                                <li onClick={() => addtocart(elm)}><IoCartOutline /></li>:
+                                <li onClick={() => loginWithRedirect()}><IoCartOutline /></li>
+                              }
                               <li onClick={() => view(elm)}><IoEyeOutline /></li>
                               <li><IoIosHeartEmpty /></li>
                             </div>

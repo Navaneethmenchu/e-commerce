@@ -69,8 +69,8 @@ function App() {
     <BrowserRouter>
     <Nav searchbtn = {searchbtn}/>
     <Rout product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose} cart={cart} setCart={setCart} addtocart={addtocart} wishlist={wishlist} setWishlist={setWishlist} addtoWishlist={addtoWishlist}/>
-    </BrowserRouter>
     <Footer />
+    </BrowserRouter>
     </>
   )
 }

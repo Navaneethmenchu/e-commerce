@@ -10,11 +10,14 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useAuth0} from "@auth0/auth0-react";
 import HomeProduct from "./HomeProduct";
+import Productdetail from "./Productdetail";
 import "./Home.css"
 import { useState } from "react";
 
 const Home = ({detail, view, close, setClose, addtocart,addtoWishlist}) => {
   const [homeProduct, setHomeProduct] = useState(HomeProduct)
+  const getCategoryCount = (category) => {
+    return Productdetail.filter((item) => item.category === category).length};
   const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
@@ -61,38 +64,38 @@ const Home = ({detail, view, close, setClose, addtocart,addtoWishlist}) => {
     </div>
     <div className="product_type"> 
       <div className="container_img">
-        <div className="box">
+        <Link to="/product" className="box">
           <div className="img_box"> 
             <img src="./img/mobile.png" alt="mobile image" />
           </div>
           <div className="detail">
-            <p>23 products</p>
+            <p>{getCategoryCount("Mobile")} products</p>
           </div>
-        </div>
-        <div className="box">
+        </Link>
+        <Link to="/product" className="box">
           <div className="img_box"> 
             <img src="./img/smartwatch.png" alt="smartwatch image" />
           </div>
           <div className="detail">
-            <p>19 products</p>
+            <p>{getCategoryCount("SmartWatch")} products</p>
           </div>
-        </div>
-        <div className="box">
+        </Link>
+        <Link to="/product" className="box">
           <div className="img_box"> 
             <img src="./img/headphone.png" alt="headphones image" />
           </div>
           <div className="detail">
-            <p>15 products</p>
+            <p>{getCategoryCount("HeadPhones")} products</p>
           </div>
-        </div>
-        <div className="box">
+        </Link>
+        <Link to="/product" className="box">
           <div className="img_box"> 
             <img src="./img/laptop.png" alt="laptop image" />
           </div>
           <div className="detail">
-            <p>23 products</p>
+            <p>{getCategoryCount("Laptop")} products</p>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
     <div className="about">
@@ -152,7 +155,11 @@ const Home = ({detail, view, close, setClose, addtocart,addtoWishlist}) => {
                       <li onClick={() => loginWithRedirect()}><IoCartOutline /></li>
                       }
                     <li onClick={() => view(elm)}><IoEyeOutline /></li>
-                    <li onClick={() => addtoWishlist(elm)}><IoIosHeartEmpty /></li>
+                    {
+                        isAuthenticated ?
+                        <li onClick={() => addtoWishlist(elm)}><IoIosHeartEmpty /></li>:
+                        <li onClick={() => loginWithRedirect()}><IoIosHeartEmpty /></li>
+                      }
                   </div>
                 </div>
                 <div className="details">

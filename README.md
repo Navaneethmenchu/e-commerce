@@ -1,25 +1,33 @@
 # 🛒 React eCommerce Website
 
-A full-featured eCommerce website built with **React**, **HTML**, **CSS**, and **JavaScript**. It includes authentication with **Auth0**, a real-time backend using **Firebase**, and essential shopping features like product browsing, cart management, and checkout.
+A fully functional eCommerce website built using **React**, **HTML**, **CSS**, and **JavaScript**. The project features user authentication via **Auth0**, a real-time backend powered by **Firebase Firestore**, and core shopping functionalities including product browsing, cart management, and wishlist.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Responsive UI with React, HTML, and CSS
-- 🔐 User authentication with Auth0
-- 🔥 Backend and database using Firebase
-- 🛍️ Add-to-cart and cart persistence
-- 💳 Checkout flow with order summary
-- 🔎 Product listing and detail views
+- ✅ Responsive and modern UI built with React, HTML, and CSS
+- 🔐 Secure user authentication with Auth0
+- 🔥 Real-time backend database using Firebase Firestore
+- 🛍️ Add products to cart with persistence
+- ❤️ Add products to wishlist
+- 🔎 Product listing with detailed views
+- 🛒 Cart and wishlist management
+- 📦 Checkout flow (can be extended)
 
 ---
 
 ## 🧰 Tech Stack
 
-- **Frontend**: React, JavaScript, HTML5, CSS3
-- **Authentication**: Auth0
-- **Backend / Realtime Database**: Firebase (Firestore)
-- **Deployment**: Vercel / Netlify / Firebase Hosting
+- **Frontend:** React, JavaScript (ES6+), HTML5, CSS3
+- **Authentication:** Auth0
+- **Backend:** Firebase Firestore (Realtime database)
 
 ---
+
+## 📦 Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Navaneethmenchu/react-ecommerce.git
+   ```

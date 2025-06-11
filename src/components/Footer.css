@@ -116,14 +116,23 @@
 
 .footer .container .pages ul li
 {
+    list-style: none;
+    margin-top: 10px;
+    
+}
+
+.footer .container .pages ul li a
+{
     margin-top: 10px;
     color: hsl(209, 93%, 6%);
     cursor: pointer;
     transition: 0.5s;
     font-size: 14px;
+    text-decoration: none;
 }
 
-.footer .container .pages ul li:hover
+.footer .container .pages ul li a:hover
 {
     color:rgb(61, 116, 224);
+    text-decoration: none;
 }

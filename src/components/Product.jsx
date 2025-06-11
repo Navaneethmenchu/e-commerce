@@ -40,7 +40,7 @@ const Product = ({product, setProduct, detail, view, close, setClose,addtocart,a
                     <h4>{elm.category}</h4>
                     <h2>{elm.title}</h2>
                     <h3>${elm.price}</h3>
-                    <button>Add to cart</button>
+                    <button onClick={() => addtocart(elm)}>Add to cart</button>
                   </div>
                 </div>
                 
@@ -85,7 +85,11 @@ const Product = ({product, setProduct, detail, view, close, setClose,addtocart,a
                                 <li onClick={() => loginWithRedirect()}><IoCartOutline /></li>
                               }
                               <li onClick={() => view(elm)}><IoEyeOutline /></li>
-                              {<li onClick={() => addtoWishlist(elm)}><IoIosHeartEmpty /></li>}
+                              {
+                                isAuthenticated ?
+                                <li onClick={() => addtoWishlist(elm)}><IoIosHeartEmpty /></li>:
+                                <li onClick={() => loginWithRedirect()}><IoIosHeartEmpty /></li>
+                              }
                             </div>
                           </div>
                           <div className="details">

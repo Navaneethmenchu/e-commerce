@@ -6,7 +6,7 @@ import { useAuth0} from "@auth0/auth0-react";
 import Productdetail from "./Productdetail";
 import "./Product.css";
 
-const Product = ({product, setProduct, detail, view, close, setClose,addtocart}) => {
+const Product = ({product, setProduct, detail, view, close, setClose,addtocart,addtoWishlist}) => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   const filterproduct = (product) => {
@@ -85,7 +85,7 @@ const Product = ({product, setProduct, detail, view, close, setClose,addtocart})
                                 <li onClick={() => loginWithRedirect()}><IoCartOutline /></li>
                               }
                               <li onClick={() => view(elm)}><IoEyeOutline /></li>
-                              <li><IoIosHeartEmpty /></li>
+                              {<li onClick={() => addtoWishlist(elm)}><IoIosHeartEmpty /></li>}
                             </div>
                           </div>
                           <div className="details">

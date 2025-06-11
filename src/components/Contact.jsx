@@ -53,7 +53,7 @@ const Contact = () => {
                     {
                         isAuthenticated ?
                         <button onClick={senddata}>send</button> :
-                        <button onClick={() => loginWithRedirect()}>Login</button>
+                        <button onClick={() => loginWithRedirect()} className="login">Login</button>
 
                     }
                 </form>

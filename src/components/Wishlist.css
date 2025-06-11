@@ -1,0 +1,111 @@
+/* Wishlist.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.wishlist_container {
+  padding: 40px 50px;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.wishlist_container .empty_wishlist {
+  margin-top: 30px;
+  margin-left: 40%;
+}
+
+.wishlist_container .empty_wishlist h2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 32px;
+  color: hsl(209, 93%, 6%);
+}
+
+.wishlist_container .empty_wishlist .empty_link {
+  text-decoration: none;
+  margin-left: 70px;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+}
+
+.wishlist_container .wishlist {
+  max-width: 100%;
+  padding: 50px 100px;
+}
+
+.wishlist_container .wishlist .wishlist_item {
+  padding: 20px 30px;
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wishlist_container .wishlist .wishlist_item .img_box {
+  padding: 20px 20px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.wishlist_container .wishlist .wishlist_item .img_box img {
+  height: 250px;
+  width: 250px;
+}
+
+.wishlist_container .wishlist .wishlist_item .detail {
+  margin-left: 60px;
+  display: flex;
+  margin-top: 30px;
+  padding: 20px 30px;
+}
+
+.wishlist_container .wishlist .wishlist_item .detail .info h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: hsl(0, 0%, 60%);
+  font-weight: 100;
+}
+
+.wishlist_container .wishlist .wishlist_item .detail .info h3 {
+  margin-top: 20px;
+  color: hsl(209, 93%, 6%);
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.wishlist_container .wishlist .wishlist_item .detail .info p {
+  margin-top: 10px;
+  color: hsl(209, 93%, 6%);
+}
+
+.wishlist_container .wishlist .wishlist_item .detail .info .move_to_cart {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: rgb(61, 116, 224);
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.wishlist_container .wishlist .wishlist_item .detail .close {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.wishlist_container .wishlist .wishlist_item .detail .close button {
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: hsl(341, 100%, 43%);
+  cursor: pointer;
+}

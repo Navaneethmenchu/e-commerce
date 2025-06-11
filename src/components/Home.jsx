@@ -13,7 +13,7 @@ import HomeProduct from "./HomeProduct";
 import "./Home.css"
 import { useState } from "react";
 
-const Home = ({detail, view, close, setClose, addtocart}) => {
+const Home = ({detail, view, close, setClose, addtocart,addtoWishlist}) => {
   const [homeProduct, setHomeProduct] = useState(HomeProduct)
   const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
@@ -35,7 +35,7 @@ const Home = ({detail, view, close, setClose, addtocart}) => {
                         <h4>{elm.category}</h4>
                         <h2>{elm.title}</h2>
                         <h3>${elm.price}</h3>
-                        <button>Add to card</button>
+                        <button>Add to cart</button>
                       </div>
                     </div>
                     
@@ -152,7 +152,7 @@ const Home = ({detail, view, close, setClose, addtocart}) => {
                       <li onClick={() => loginWithRedirect()}><IoCartOutline /></li>
                       }
                     <li onClick={() => view(elm)}><IoEyeOutline /></li>
-                    <li><IoIosHeartEmpty /></li>
+                    <li onClick={() => addtoWishlist(elm)}><IoIosHeartEmpty /></li>
                   </div>
                 </div>
                 <div className="details">

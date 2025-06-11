@@ -46,7 +46,7 @@ const Nav = ({searchbtn}) => {
             )
           }
           <div className="second_icon">
-            <Link to="/" className="link" ><GoHeart /></Link>
+            <Link to="/wishlist" className="link" ><GoHeart /></Link>
             <Link to="/cart" className="link" ><HiOutlineShoppingBag /></Link>
           </div>
         </div>
